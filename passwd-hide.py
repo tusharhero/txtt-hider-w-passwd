@@ -9,8 +9,9 @@ def passwdnm(password,dic):#this function will take a passwd and dictionary and 
     nm = 1#container
     while l < len(password):#loops until the multipliciation is complete
         nm = nm + (c2l(password[l],dic)+1)#multiplies the nuber of chracter + with the nm container
-        l = l + 1#counting
-    return nm
+        l = l + 1#counting 
+        #also outing the last character
+    return [nm,c2l(password[len(password)-1],dic)]
 
 def list2string(list):#converts list into string
     strin = ''#string container
@@ -22,16 +23,17 @@ def list2string(list):#converts list into string
 
 def stringencrypt(string,password,dic,cid):#this function will encrypt the text and return the encrypted text as a list.
     l = 0#good 'ol counter
-    nm = passwdnm(password, dic)#getting the passwordnumber(secret)
+    nm = passwdnm(password, dic)[0]#getting the passwordnumber(secret)
+    nml = passwdnm(password, dic)[1]#getting the last letter number in the password 
     cryptedstring = []#empty list as a container
     while l < len(string):#looping untill complete
-        mn = c2l(string[l],dic)*nm#multiplying the character length with the passwordnumber
+        mn = c2l(string[l],dic)*nm + nml #multiplying the character length with the passwordnumber
         cryptedstring.append(cid[mn])#adding the new number's character in the spooking dic "cid" to the list
         l = l + 1#counting
     return list2string(cryptedstring)# returns it as password list sa a stirng
 
 #driver
-#print(encrypt('h','ab',"abcdefghijklmnopqrstuvwxyz","zyxwvutsrqponmlkjihgfedcba"))
+##print(encrypt('h','ab',"abcdefghijklmnopqrstuvwxyz","zyxwvutsrqponmlkjihgfedcba"))
 cid = open("unicode.txt",'rt')
 cid = cid.read()
 print(stringencrypt('hello I am tushar how are you',"sussybakaz","abcdefghijklmnopqrstuvwxyz ",cid))
