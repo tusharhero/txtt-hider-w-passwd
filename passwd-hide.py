@@ -8,7 +8,7 @@ def passwdnm(password,dic):#this function will take a passwd and dictionary and 
     l = 0#counter
     nm = 1#container
     while l < len(password):#loops until the multipliciation is complete
-        nm = (c2l(password[l],dic)+1) + nm#multiplies the nuber of chracter + with the nm container
+        nm = nm + (c2l(password[l],dic)+1)#multiplies the nuber of chracter + with the nm container
         l = l + 1#counting
     return nm
 
