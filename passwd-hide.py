@@ -10,7 +10,6 @@ def passwdnm(password,dic):#this function will take a passwd and dictionary and 
     while l < len(password):#loops until the multipliciation is complete
         nm = (c2l(password[l],dic)+1) + nm#multiplies the nuber of chracter + with the nm container
         l = l + 1#counting
-    print(nm)
     return nm
 
 def list2string(list):#converts list into string
@@ -20,7 +19,7 @@ def list2string(list):#converts list into string
         strin = strin + str(list[l])# add lth termt to the list
         l = l + 1
     return strin
-#'''
+
 def stringencrypt(string,password,dic,cid):#this function will encrypt the text and return the encrypted text as a list.
     l = 0#good 'ol counter
     nm = passwdnm(password, dic)#getting the passwordnumber(secret)
