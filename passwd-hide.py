@@ -32,8 +32,24 @@ def stringencrypt(string,password,dic,cid):#this function will encrypt the text 
         l = l + 1#counting
     return list2string(cryptedstring)# returns it as password list sa a stirng
 
+def stringdecrypt(cryptedstring,password,dic,cid):
+    l = 0#good 'ol counter
+    nm = passwdnm(password, dic)[0]#getting the passwordnumber(secret)
+    nml = passwdnm(password, dic)[1]#getting the last letter number in the password 
+    decryptedstring = []#empty list for carrying the decrypted
+    while l < len(cryptedstring):#will loop until the every character is decoded
+        mn = (c2l(cryptedstring[l],cid) - nml)/nm#reversing the process which was in stringcrypt()
+        mn = int(mn)#converting to int
+        decryptedstring.append(dic[mn])#adding the mnth character from the list to the list
+        l = l + 1#counting
+    return list2string(decryptedstring)
+
+
 #driver
-##print(encrypt('h','ab',"abcdefghijklmnopqrstuvwxyz","zyxwvutsrqponmlkjihgfedcba"))
+
 cid = open("unicode.txt",'rt')
 cid = cid.read()
-print(stringencrypt('hello I am tushar how are you',"sussybakaz","abcdefghijklmnopqrstuvwxyz ",cid))
+encrypt = stringencrypt('hello i am tushar how are you',"sussybakaz","abcdefghijklmnopqrstuvwxyz ",cid)
+print(encrypt)
+decrypt = stringdecrypt(encrypt,"sussybakaz","abcdefghijklmnopqrstuvwxyz ", cid)
+print(decrypt)
