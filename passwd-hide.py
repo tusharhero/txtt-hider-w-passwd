@@ -27,7 +27,7 @@ def stringencrypt(string,password,dic,cid):#this function will encrypt the text 
     nml = passwdnm(password, dic)[1]#getting the last letter number in the password 
     cryptedstring = []#empty list as a container
     while l < len(string):#looping untill complete
-        mn = c2l(string[l],dic)*nm + nml #multiplying the character length with the passwordnumber
+        mn = c2l(string[l],dic)*nm + nml #multiplying the character length with the passwordnumber and adding the last character number
         cryptedstring.append(cid[mn])#adding the new number's character in the spooking dic "cid" to the list
         l = l + 1#counting
     return list2string(cryptedstring)# returns it as password list sa a stirng
