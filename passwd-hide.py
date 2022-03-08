@@ -1,19 +1,9 @@
 #/bin/python3
 #will take a  password and  a string and make the string only decodable by using the password
 
-def c2l(s,dic):#this function will figure out the placement in dictionary
-    l = 0#variable will contain the placment in dictionary
-    while l < len(dic): #will break if l is more than the length of dictionary
-        if s == dic[l]:# if it finds the s is equal to the current character in the dictionary it returns it
-            return l
-        else:#if it is not the case it just adds 1 to it and loops again
-            l = l + 1
-    return int(l/2) #if not found at all returns this
+from txt2code.py import c2l
+from txt2code.py import l2c #my previous functions which are going to be used here.
 
-def l2c(s,dic,cid):#this function will convert the character's position into letter
-    l = c2l(s,dic)#uses the c2l() to get the position
-    c = cid[l]#return the character
-    return c
 
 '''
 def passwdnm(password,dic):#this function will take a passwd and dictionary and convert it into a number and another number
