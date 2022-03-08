@@ -31,16 +31,6 @@ def stringencrypt(string,password,dic,cid):#this function will encrypt the text 
         l = l + 1#counting
     return list2string(cryptedstring)# returns it as password list sa a stirng
 
-'''
-def encrypt(string,password,dic,cid):
-    len(password)
-    l = 1
-    while 
-    passs = (c2l(password[0], dic)+1) * (c2l(password[1], dic)+1)
-    place = string[0]*passs
-    return l2c(1, dic, cid)
-'''
-
 #driver
 #print(encrypt('h','ab',"abcdefghijklmnopqrstuvwxyz","zyxwvutsrqponmlkjihgfedcba"))
 cid = open("unicode.txt",'rt')
