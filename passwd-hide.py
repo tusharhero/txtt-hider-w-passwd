@@ -4,19 +4,6 @@
 from txt2code.py import c2l
 from txt2code.py import l2c #my previous functions which are going to be used here.
 
-
-'''
-def passwdnm(password,dic):#this function will take a passwd and dictionary and convert it into a number and another number
-    l = 0#counter
-    nm = 1#container
-    while l < len(password):#loops until the multipliciation is complete
-        nm = (c2l(password[l],dic)+1) * nm#multiplies the nuber of chracter + with the nm container
-        l = l + 1#counting
-    nm = nm + (c2l(password[l-1],dic))#just a last operation
-    print(nm)
-    return nm
-#'''
-#'''
 def passwdnm(password,dic):#this function will take a passwd and dictionary and convert it into a number
     l = 0#counter
     nm = 1#container
