@@ -43,13 +43,3 @@ def stringdecrypt(cryptedstring,password,dic,cid):
         decryptedstring.append(dic[mn])#adding the mnth character from the list to the list
         l = l + 1#counting
     return list2string(decryptedstring)
-
-
-#driver
-
-cid = open("unicode.txt",'rt')
-cid = cid.read()
-encrypt = stringencrypt('hello i am tushar how are you',"sussybakaz","abcdefghijklmnopqrstuvwxyz ",cid)
-print(encrypt)
-decrypt = stringdecrypt(encrypt,"sussybakaz","abcdefghijklmnopqrstuvwxyz ", cid)
-print(decrypt)
