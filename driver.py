@@ -1,7 +1,7 @@
 print("passwdhide driver")
 print("NO spaces, or uppercase or numbers and special characters other that ' '")
 print("hit enter to continue")
-
+input()
 from passwdhide import stringdecrypt
 from passwdhide import stringencrypt
 
