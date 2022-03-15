@@ -26,7 +26,7 @@ def txt2code(txt,dic,cid): #now using the functions to convert string to gnirts
         sussy = sussy + l2c(txt[l], dic, cid)#add the lth character to the string
         l = l + 1#counting
     return sussy
-
+'''
 #driver
 ss = input()
 ab = 'abcdefghijklmnopqrstuvwxyz '
@@ -35,3 +35,4 @@ x = txt2code(ss,ab,ba)
 print(x)
 x = txt2code(x,ba,ab)#to convert back to text just reverse the string
 print(x)
+'''
