@@ -7,7 +7,7 @@ from passwdhide import stringencrypt
 
 cid = open("unicode.txt",'rt')#always use the same cid for the the password i'e uncide.txt from this repo
 cid = cid.read()
-dic = "abcdefghijklmnopqrstuvwxyz "
+dic = "abcdefghijklmnopqrstuvwxyz 1234567890.,"
 
 ask = input("do you want to encrypt or decrypt? : e or d")
 if ask == "e":
