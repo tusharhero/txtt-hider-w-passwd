@@ -24,7 +24,7 @@ def list2string(list):#converts list into string
 def stringencrypt(string,password,dic,cid):#this function will encrypt the text and return the encrypted text as a list.
     l = 0#good 'ol counter
     nm = passwdnm(password, dic)[0]#getting the passwordnumber(secret)
-    nml = passwdnm(password, dic)[len(passwdnm(password, dic))]#getting the last letter number in the password 
+    nml = passwdnm(password, dic)[len(passwdnm(password, dic))-1]#getting the last letter number in the password 
     cryptedstring = []#empty list as a container
     while l < len(string):#looping untill complete
         mn = c2l(string[l],dic)*nm + nml #multiplying the character length with the passwordnumber and adding the last character number
@@ -35,7 +35,7 @@ def stringencrypt(string,password,dic,cid):#this function will encrypt the text 
 def stringdecrypt(cryptedstring,password,dic,cid):
     l = 0#good 'ol counter
     nm = passwdnm(password, dic)[0]#getting the passwordnumber(secret)
-    nml = passwdnm(password, dic)[len(passwdnm(password, dic))]#getting the last letter number in the password 
+    nml = passwdnm(password, dic)[len(passwdnm(password, dic))-1]#getting the last letter number in the password 
     decryptedstring = []#empty list for carrying the decrypted
     while l < len(cryptedstring):#will loop until the every character is decoded
         mn = (c2l(cryptedstring[l],cid) - nml)/nm#reversing the process which was in stringcrypt()
