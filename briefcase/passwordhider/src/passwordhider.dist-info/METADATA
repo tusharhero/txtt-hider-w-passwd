@@ -1,10 +1,10 @@
 Metadata-Version: 2.1
 Briefcase-Version: 0.3.6
 Name: passwordhider
-Formal-Name: Password Hider
-App-ID: io.github.tusharhero.github.io.passwordhider
+Formal-Name: passwordhider
+App-ID: io.github.tusharhero.passwordhider
 Version: 0.0.1
 Home-page: https://tusharhero.github.io/txtt-hider-w-passwd
 Author: Tushar Maharana
 Author-email: tusharmaharana44676@gmail.com
-Summary: hides text using a password and also unhides using the same.
+Summary: Hide text using password, and also unhides .

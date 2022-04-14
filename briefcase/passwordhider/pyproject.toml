@@ -1,6 +1,6 @@
 [tool.briefcase]
 project_name = "passwordhider"
-bundle = "io.github.tusharhero.github.io"
+bundle = "io.github.tusharhero"
 version = "0.0.1"
 url = "https://tusharhero.github.io/txtt-hider-w-passwd"
 license = "MIT license"
@@ -8,8 +8,8 @@ author = 'Tushar Maharana'
 author_email = "tusharmaharana44676@gmail.com"
 
 [tool.briefcase.app.passwordhider]
-formal_name = "Password Hider"
-description = "hides text using a password and also unhides using the same."
+formal_name = "passwordhider"
+description = "Hide text using password, and also unhides ."
 icon = "src/passwordhider/resources/passwordhider"
 sources = ['src/passwordhider']
 requires = [
