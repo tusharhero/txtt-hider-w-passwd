@@ -5,19 +5,15 @@ from driver import decrypt
 
 sg.theme('DarkBlue2')   # Add a touch of color
 
-cprint = sg.cprint
 # All the stuff inside your window.
 buttons = [sg.Button('Hide text'),sg.Button('Unhide text')]
 layout = [
-    [sg.Text('Enter text/hidden text:'), sg.InputText(expand_x=True)],[sg.Text('Enter password:'), sg.InputText(expand_x=True)],
+    [sg.Text('Only spaces, or uppercase or numbers and special characters other than ".,"')],
+    [sg.Text('text/hidden text:'), sg.InputText('text or hiddentext',expand_x=True)],
+    [sg.Text('password:'), sg.InputText('password',expand_x=True)],
     buttons,
     [[sg.Text('output:')],sg.Multiline('nothing here yet!',key='out',expand_x=True, expand_y=True)]
     ]
-
-
-
-
-
 # Create the Window
 window = sg.Window('txtt-hider-w-passwd', layout,size=(750 ,300)) 
 
