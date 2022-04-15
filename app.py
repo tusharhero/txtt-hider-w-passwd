@@ -6,7 +6,7 @@ import PySimpleGUI as sg
 from driver import encrypt
 from driver import decrypt
 
-#I know this app's code look terrible and it doesn't have good comments but I don't have time to continue
+#I know this app's code looks terrible and it doesn't have good comments but I don't have time to continue
 
 sg.change_look_and_feel('DarkAmber')# Add a touch of color
 
