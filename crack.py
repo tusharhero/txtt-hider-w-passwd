@@ -17,7 +17,7 @@ def getletters(dic,let_freq):
         letters[dic[n]] = let_freq[n]
     return letters
 
-let_freq = [" ","e","a","r","i","o","t","n","s","l","c","u","d","p","m","h","g","b","f","y","w","k","v","x","z","j","q"]
+let_freq = [" ","e","a","r","i","o","t","n","s","l","c","u","d","p","m","h","g","b","f",".","y","w","k","v",",","x","z","j","q"]
 
 def decrypt(encryptedmessage, letters):
     decryptedmessage = ""
@@ -26,7 +26,7 @@ def decrypt(encryptedmessage, letters):
     return decryptedmessage
 
 
-def heckthemessage(message, let_freq = ["e","a","r","i","o","t","n","s","l","c","u","d","p","m","h","g","b","f","y","w","k","v","x","z","j","q"]):
+def heckthemessage(message, let_freq = [" ","e","a","r","i","o","t","n","s","l","c","u","d","p","m","h","g","b","f",".","y","w","k","v",",","x","z","j","q"]):
     occur = getoccurrences(message)
     distri  = getdistri(occur)
     letters = getletters(distri,let_freq)
