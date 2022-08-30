@@ -4,6 +4,7 @@ def getoccurrences(l):
     for a in oc:
         length = l.count(a)
         occur[a] = length
+    print(occur)
     return occur
 
 def getdistri(dic):
@@ -31,4 +32,4 @@ def heckthemessage(message, let_freq = [" ","e","a","r","i","o","t","n","s","l",
     letters = getletters(distri,let_freq)
     return decrypt(message, letters)
 
-# print(heckthemessage(input("Enter the text(big messages work best) : ")))
+print(heckthemessage(input("Enter the text(big messages work best) : ")))
