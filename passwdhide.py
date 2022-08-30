@@ -1,9 +1,5 @@
 #/bin/python3
 #will take a  password and  a string and make the string only decodable by using the password
-
-from txt2code import c2l
-from txt2code import l2c #my previous functions which are going to be used here.
-
 def passwdnm(password,dic):#this function will take a passwd and dictionary and convert it into a number
     nm = 1
     for char in password:
@@ -27,7 +23,7 @@ def stringdecrypt(cryptedstring,password,dic,cid):
     nml = passwdnm(password, dic)[len(passwdnm(password, dic))-1]#getting the last letter number in the password 
     decryptedstring = []#empty list for carrying the decrypted
     while l < len(cryptedstring):#will loop until the every character is decoded
-        mn = (c2l(cryptedstring[l],cid) - nml)/nm#reversing the process which was in stringcrypt()
+        mn = (cid.cryptedstring[l] - nml)/nm#reversing the process which was in stringcrypt()
         mn = int(mn)#converting to int
         decryptedstring.append(dic[mn])#adding the mnth character from the list to the list
         l = l + 1#counting
