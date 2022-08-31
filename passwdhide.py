@@ -1,5 +1,6 @@
 #/bin/python3
 #will take a  password and  a string and make the string only decodable by using the password
+from txt2code import *
 def passwdnm(password,dic):#this function will take a passwd and dictionary and convert it into a number
     l = 0#counter
     nm = 1#container
