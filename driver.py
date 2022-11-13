@@ -5,7 +5,7 @@ input()
 from passwdhide import stringdecrypt
 from passwdhide import stringencrypt
 
-cid = open("unicode.txt",'rt')#always use the same cid for the the password i'e uncide.txt from this repo
+cid = open("unicode.txt",'rt', encoding="utf8")#always use the same cid for the the password i'e uncide.txt from this repo
 cid = cid.read()
 dic = "abcdefghijklmnopqrstuvwxyz 1234567890.,"
 
